@@ -2,8 +2,8 @@ model_name: cbow
 
 dataset: WikiText2
 data_dir: data/
-train_batch_size: 16 # 96
-val_batch_size: 16
+train_batch_size: 96 # 96
+val_batch_size: 96
 shuffle: True
 
 optimizer: Adam
