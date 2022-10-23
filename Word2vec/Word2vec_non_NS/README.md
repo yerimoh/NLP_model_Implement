@@ -74,6 +74,6 @@ After you train and get weight,
 you can test this semantic & syntactic test
 
 ```
-python3 semantic.py -
+python3 semantic.py 
 ```
 
