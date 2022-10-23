@@ -56,6 +56,8 @@ Difference with the original paper:
 ## Usage
 
 
+### train
+
 ```
 python3 train.py --config config.yaml
 ```
@@ -66,4 +68,12 @@ Before running the command, change the training parameters in the config.yaml, m
 - dataset ( "WikiText103")
 - model_dir (directory to store experiment artifacts, should start with "weights/")
 
+
+### test
+After you train and get weight,  
+you can test this semantic & syntactic test
+
+```
+python3 semantic.py -
+```
 
