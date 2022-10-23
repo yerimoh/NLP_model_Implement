@@ -16,11 +16,6 @@ Difference with the original paper:
 
 
 
-### CBOW Model in Details
-
-
-
-### Skip-Gram Model in Details
 
 
 
