@@ -76,4 +76,7 @@ you can test this semantic & syntactic test
 ```
 python3 semantic.py 
 ```
+```
+python3 syntactic.py 
+```
 
