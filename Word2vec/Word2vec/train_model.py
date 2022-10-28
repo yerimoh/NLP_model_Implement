@@ -219,11 +219,16 @@ def main():
         #    break
     print(len(processed))
 
-    #fin_processed = []
-    # 상위단어 빈도의 단어 30k 뽑기 (30000)
-    #sorted_processed = sorted(processed.items(), key=lambda x: x[1], reverse=True) #정렬
-    #for i in range(0,30000):
-    #    fin_processed.append(sorted_processed[i][0]) # ex) sorted_processed = [('a', 222), ('b', 221), ('c', 220)]
+    ################################################  limit dataset  ######################################################
+    # 아래 주석을 없애라                                                                                                   #
+    #fin_processed = []                                                                                                   #
+    # 상위단어 빈도의 단어 30k 뽑기 (30000)                                                                                 #
+    #sorted_processed = sorted(processed.items(), key=lambda x: x[1], reverse=True) #정렬                                 #
+    #for i in range(0,30000):                                                                                             #
+    #    fin_processed.append(sorted_processed[i][0]) # ex) sorted_processed = [('a', 222), ('b', 221), ('c', 220)]       #
+    #######################################################################################################################
+    
+
     vocabulary = set(processed)
  
 
