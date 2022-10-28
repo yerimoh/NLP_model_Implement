@@ -243,7 +243,7 @@ def main():
     print()
 
     #Training section
-    W_emb, W_out = word2vec_trainer(processed, word2ind, mode=mode, dimension=50, learning_rate=0.025, iteration=300000)
+    W_emb, W_out = word2vec_trainer(processed, word2ind, mode=mode, dimension=640, learning_rate=0.025, iteration=100000)
     
     # word_vecs W_emb
     word_vecs = W_emb
