@@ -11,7 +11,7 @@ There 2 model architectures desctibed in the paper:
 
 Difference with the original paper:
 
-- Trained on [WikiText103](https://pytorch.org/text/stable/datasets.html#wikitext-2) inxtead of Google News corpus.
+- Trained on one-milion-dataset inxtead of Google News corpus.
 
 
 
