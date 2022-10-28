@@ -170,7 +170,7 @@ def main():
                         help='"SG" for skipgram, "CBOW" for CBOW')
     parser.add_argument('part', metavar='partition', type=str,
                         help='"part" if you want to train on a part of corpus, "full" if you want to train on full corpus')
-    ㄴparser.add_argument('trainingWord', metavar='Number of word ', type=int,
+    parser.add_argument('trainingWord', metavar='Number of word ', type=int,
                         help='The number of training words you want')
     # 입력 Argument들을 args에 할당
     ## 이제 아래 코드들로 받은 입력인자들을 args에 넣어 원하는함수(args)로 사용가능
