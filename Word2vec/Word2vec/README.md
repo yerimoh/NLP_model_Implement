@@ -11,7 +11,7 @@ There 2 model architectures desctibed in the paper:
 
 Difference with the original paper:
 
-- Trained on one-milion-dataset inxtead of Google News corpus.
+- Trained on one-ilion-dataset inxtead of Google News corpus.
 
 
 
