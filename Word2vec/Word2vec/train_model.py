@@ -184,7 +184,8 @@ def main():
     if part=="part":
         text = open('text8',mode='r').readlines()[0][:1000000] #Load a part of corpus for debugging
     elif part=="full":
-        # data_ 폴더 안에있는 데이터들 목록 가져오기
+        ''' 
+	# data_ 폴더 안에있는 데이터들 목록 가져오기
         file_names = os.listdir('data_')
         # 목록들 하나하나 열어서 한줄한줄 읽기
         f = open("fin_data",'a')
@@ -197,7 +198,10 @@ def main():
             if count == 15:
                 break
         f.close()
-        text = open('fin_data',mode='r').read() #Load full corpus for submissionl
+        text = open('fin_data',mode='r').read() #Load full corpus for submission
+        ''' 
+        text = open('text8',mode='r').readlines()[0] #Load a part of corpus for debugging
+
     else:
         print("Unknown argument : " + part)
         exit()
