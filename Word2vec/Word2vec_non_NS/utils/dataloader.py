@@ -4,8 +4,8 @@ from torch.utils.data import DataLoader
 from torchtext.data import to_map_style_dataset
 from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
-#from torchtext.datasets import WikiText2, WikiText103
-from torchtext.datasets import WikiText103
+from torchtext.datasets import WikiText2, WikiText103
+#from torchtext.datasets import WikiText103
 
 from utils.constants import (
     CBOW_N_WORDS,
@@ -26,8 +26,8 @@ def get_english_tokenizer():
 
 def get_data_iterator(ds_name, ds_type, data_dir):
     if ds_name == "WikiText2":
-        #data_iter = WikiText2(root=data_dir, split=(ds_type))
-        data_iter = WikiText103(root=data_dir, split=(ds_type))
+        data_iter = WikiText2(root=data_dir, split=(ds_type))
+        #data_iter = WikiText103(root=data_dir, split=(ds_type))
          
         print("this is", data_iter)
     elif ds_name == "WikiText103":
