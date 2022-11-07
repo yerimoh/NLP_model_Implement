@@ -1,7 +1,7 @@
 # Word2Vec with non-ns
 Implementation of the first paper on word2vec    
 - [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)
-
+- if you want to learn about detail this model, visit this [link](https://yerimoh.github.io/DL14/)
 ---
 
 ## Word2Vec Overview
