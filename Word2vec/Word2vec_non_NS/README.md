@@ -1,6 +1,7 @@
 # Word2Vec with non-ns
 Implementation of the first paper on word2vec - [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)
 
+---
 
 ## Word2Vec Overview
 
@@ -13,29 +14,28 @@ Difference with the original paper:
 
 - Trained on [WikiText103](https://pytorch.org/text/stable/datasets.html#wikitext-2) inxtead of Google News corpus.
 
-
-
-
-
+-----
 
 ## Project Structure
 
 
 ```
-.
 ├── README.md
 ├── config.yaml
-├── notebooks
-│   └── Inference.ipynb
 ├── requirements.txt
 ├── train.py
+├── semantic.py
+├── syntactic.py
 ├── utils
+│   ├── test.py
 │   ├── constants.py
 │   ├── dataloader.py
 │   ├── helper.py
 │   ├── model.py
 │   └── trainer.py
-└── weights
+└── test_data
+    ├── semantic_train.txt
+    └── syntactic_train.txt
 ```
 
 - **utils/dataloader.py** - data loader for WikiText-2 and WikiText103 datasets
@@ -46,6 +46,7 @@ Difference with the original paper:
 - **config.yaml** - file with training parameters
 - **weights/** - folder where expriments artifacts are stored
 
+----
 
 ## Usage
 
