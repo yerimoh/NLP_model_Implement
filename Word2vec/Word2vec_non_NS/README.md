@@ -43,9 +43,10 @@ Difference with the original paper:
 - **utils/model.py** - model architectures
 - **utils/trainer.py** - class for model training and evaluation
 
-- **train.py** - script for training
-- **config.yaml** - file with training parameters
-- **weights/** - folder where expriments artifacts are stored
+- **train.py** - script for training    
+- **config.yaml** - file with training parameters     
+- **utils/constants.py** - you can hadle more detail patameters       
+- **weights/** - folder where expriments artifacts are stored if you want to retrain you must delete it
 
 ----
 
