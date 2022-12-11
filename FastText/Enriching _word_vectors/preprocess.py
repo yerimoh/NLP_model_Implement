@@ -2,6 +2,8 @@ import os, pickle, sys, string, unicodedata, random
 from collections import Counter
 import numpy as np
 from tqdm.auto import tqdm
+from utils.word import *   
+
 
 all_letters = string.ascii_letters + " .,;'"
 n_letters = len(all_letters)
@@ -117,6 +119,28 @@ def get_unigram(counter, w2id):
     return p_list
 
 if __name__ == "__main__":
+    text = ""
+    for file in tqdm(os.listdir("./data"), desc="Reading Data"):
+        with open("./data/"+file, 'r') as f:
+            data = f.read()
+            data += " "
+            text += data
+
+    corpus = freq(text, 10)
+    print("number of total words: ", len(corpus))
+    # print("number of deleted rare words: ", len(rare))
+    pickle.dump(corpus, open("./preprocessed_data/freq_corpus", 'wb'), protocol=-1)
+
+    with open('./preprocessed_data/freq_corpus', 'rb') as f:
+        text = pickle.load(f)
+
+    corpus, w2id, id2w, counter = preprocess(text)
+    preprocessed = [corpus, w2id, id2w, counter]
+    print("vocab length : ", len(w2id))
+    pickle.dump(preprocessed, open("./preprocessed_data/preprocessed_corpus", 'wb'), protocol=-1)
+
+
+    
     with open('../../word2vec/preprocessed_data/preprocessed_corpus', 'rb') as f:
         corpus, w2id, id2w, counter = pickle.load(f)
     
@@ -125,8 +149,8 @@ if __name__ == "__main__":
     sub_w2id, sub_id2w, char_dict = {}, {}, {}
     corpus = []
 
-    for file in tqdm(os.listdir("../../word2vec/data/"), desc="reading data"):
-        with open("../../word2vec/data/"+file, 'r') as f:
+    for file in tqdm(os.listdir("./data/"), desc="reading data"):
+        with open("./data/"+file, 'r') as f:
             data = f.read()
 
         data = unicodeToAscii(data)
