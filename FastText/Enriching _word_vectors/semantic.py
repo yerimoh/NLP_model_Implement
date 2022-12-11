@@ -18,7 +18,7 @@ if __name__ == "__main__":
     cat = None
     q = []
 
-    with open("/hdd1/user22/word2vec/analogies/questions-words.txt", 'r') as f:
+    with open("./test_data/semantic_train.txt", 'r') as f:
         while True:
             line = f.readline()
             if not line:
@@ -37,7 +37,7 @@ if __name__ == "__main__":
     perf2 = []
 
     if sys.argv[1] == "fasttext":
-        with open('../../word2vec/preprocessed_data/preprocessed_corpus', 'rb') as f:
+        with open('./preprocessed_data/preprocessed_corpus', 'rb') as f:
             corpus, w2id, id2w, counter = pickle.load(f)
         with open("./preprocessed_data/dicts", "rb") as f:
             sub_w2id, sub_id2w, char_dict = pickle.load(f)
