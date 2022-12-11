@@ -2,8 +2,15 @@ import pickle, sys
 import numpy as np
 from tqdm.auto import tqdm
 import fasttext
-from utils import *
+from utils.test import * 
 
+
+def norm_mat(embeddings):
+    # normalization
+    norms = (embeddings ** 2).sum(axis=1) ** (1 / 2)
+    norms = np.reshape(norms, (len(norms), 1))
+    embeddings_norm = embeddings / norms
+    embeddings_norm.shape
 
 
 if __name__ == "__main__":
