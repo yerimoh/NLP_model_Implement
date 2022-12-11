@@ -7,7 +7,7 @@ import numpy as np
 np.random.seed(0)
 
 if __name__ == "__main__":
-    with open('../../word2vec/preprocessed_data/preprocessed_corpus', 'rb') as f:
+    with open('./preprocessed_data/preprocessed_corpus', 'rb') as f:
         corpus, w2id, id2w, counter = pickle.load(f)
     with open("./preprocessed_data/dicts", "rb") as f:
         sub_w2id, sub_id2w, char_dict = pickle.load(f)
@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
     start_time = time.time()
 
-    for file in os.listdir("../../word2vec/data/")[epoch:]:
+    for file in os.listdir("./data/")[epoch:]:
         loss = 0
         with open("./preprocessed_data/w2v/"+file+"_data", "rb") as f:
             contexts, targets = pickle.load(f)
