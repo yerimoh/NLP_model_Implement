@@ -7,7 +7,7 @@ from utils.word import *
 
 all_letters = string.ascii_letters + " .,;'"
 n_letters = len(all_letters)
-
+ 
 def unicodeToAscii(s):
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
