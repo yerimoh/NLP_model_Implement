@@ -6,7 +6,7 @@ import numpy as np
 
 np.random.seed(0)
 
-if __name__ == "__main__":
+if __name__ == "__main__":   
     with open('./preprocessed_data/preprocessed_corpus', 'rb') as f:
         corpus, w2id, id2w, counter = pickle.load(f)
     with open("./preprocessed_data/dicts", "rb") as f:
