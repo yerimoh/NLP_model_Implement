@@ -1,8 +1,9 @@
 
 # FastText
-FastText: Enriching Word Vectors with Subword Information - [FastText: Enriching Word Vectors with Subword Information](https://arxiv.org/pdf/1607.04606.pdf)
+FastText: Enriching Word Vectors with Subword Information 
+: [FastText: Enriching Word Vectors with Subword Information](https://arxiv.org/pdf/1607.04606.pdf)
 
-if you want to more learn about this paper read [this](https://yerimoh.github.io/LAN7/)
+❤️ if you want to more learn about this paper read [this](https://yerimoh.github.io/LAN7/)
 
 
 
