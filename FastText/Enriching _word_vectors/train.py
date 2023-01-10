@@ -20,7 +20,8 @@ if __name__ == "__main__":
         W_in = para["word_vecs"]
         sub_W = para["sub_vecs"]
         epoch = para["epoch"]+1
-    except:
+    except: 
+        # 초기라면 초깃값 랜덤으로 잡음
         W_in = (np.random.randn(len(w2id), 300) * 0.01).astype(np.float128)
         sub_W = (np.random.randn(len(sub_w2id), 300) * 0.01).astype(np.float128)
         W_out = (np.random.randn(len(w2id), 300) * 0.01).astype(np.float128)
@@ -36,7 +37,7 @@ if __name__ == "__main__":
 
     lr -= decay*epoch
 
-    start_time = time.time()
+    start_time = time.time() # 1970년 1월 1일 0시 0분 0초 이후 경과한 시간/ 즉, 현재 시각
 
     for file in os.listdir("./data/")[epoch:]:
         loss = 0
@@ -50,7 +51,7 @@ if __name__ == "__main__":
             h1 = W_in[t] 
             h2 = sub_W[char_dict[t]]
 
-            h = np.sum(np.vstack((h1, h2)), axis=0)
+            h = np.sum(np.vstack((h1, h2)), axis=0) # sum(배열을 세로로 결합)
             
             negative_sample = np.random.choice(vocab_size, size=5*len(c), replace=True, p=p_list)
             context = np.append(c, negative_sample)
