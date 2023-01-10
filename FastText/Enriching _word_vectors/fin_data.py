@@ -1,7 +1,7 @@
 import os, pickle, sys, string, unicodedata, random
 from collections import Counter
 import numpy as np
-from tqdm.auto import tqdm
+from tqdm.auto import tqdm  # ProgressBar
 from utils.word import *   
 
 
@@ -56,7 +56,8 @@ def clean_str(string):
 
 def preprocess(w2id, sub_w2id, sub_id2w, char_dict, n=6):
     words = list(w2id.keys())
-
+    
+    # desc = 진행률 표시의 접두사
     for word in tqdm(words, desc="building sub dicts"):
         subword_list = []
         full = "<" + word + ">"
