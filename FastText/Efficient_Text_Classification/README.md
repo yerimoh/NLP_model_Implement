@@ -18,20 +18,13 @@ FastText: Bag of Tricks for Efficient Text Classification
 ```
 .
 ├── README.md
-├── WS353.py
-├── fin_data.py
-├── semantic.py
+├── dataset.py
+├── main.py
+├── model.py
 ├── syntactic.py
-├── train.py
-├── data
-│   └── ws353simrel.tar.gz
-│   └── (you must add) one_bilion_dataset
-├── test_data
-│   └── semantic_train.txt
-│   └── syntactic_train.txt
-└── utils
-    ├── test.py
-    └── word.py
+├── requirements.txt
+└── data
+    └── it will be made if you follow step in usage
 
 ```
 
