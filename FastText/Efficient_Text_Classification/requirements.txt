@@ -1,0 +1,3 @@
+numpy
+spacy
+torch>=1.13.1
