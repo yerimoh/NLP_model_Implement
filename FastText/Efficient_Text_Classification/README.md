@@ -43,8 +43,9 @@ We use [preprocessed data (See Xiang Zhang's folder)](https://drive.google.com/d
 
 ---
 
-## Usage
+# Usage
 
+## train
 
 * Experiment
     ```
@@ -54,6 +55,10 @@ We use [preprocessed data (See Xiang Zhang's folder)](https://drive.google.com/d
     # Download datasets (select your os (mac or ubuntu))
     $ sh download_datasets_mac.sh
     ```
+
+
+
+## test
 
     * AG
     ```
